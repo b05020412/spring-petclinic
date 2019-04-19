@@ -255,5 +255,64 @@
       </snapshots>
     </pluginRepository>
   </pluginRepositories>
+    
+    <profiles>
+		<profile>
+			<id>local</id>
+
+			<properties>
+				<deployProfile>local</deployProfile>
+			</properties>
+		</profile>
+		<profile>
+			<id>dev</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<deployProfile>dev</deployProfile>
+			</properties>
+		</profile>
+		<profile>
+			<id>stg</id>
+
+			<properties>
+				<deployProfile>stg</deployProfile>
+			</properties>
+		</profile>
+		<profile>
+			<id>prd</id>
+			<properties>
+				<deployProfile>prd</deployProfile>
+			</properties>
+		</profile>
+		<profile>
+			<id>prd_batch</id>
+			<properties>
+				<deployProfile>prd_batch</deployProfile>
+			</properties>
+		</profile>
+		<profile>
+			<id>local_batch</id>
+
+			<properties>
+				<deployProfile>local_batch</deployProfile>
+			</properties>
+		</profile>
+		<profile>
+			<id>dev_batch</id>
+
+			<properties>
+				<deployProfile>dev_batch</deployProfile>
+			</properties>
+
+		</profile>
+		<profile>
+			<id>stg_batch</id>
+			<properties>
+				<deployProfile>stg_batch</deployProfile>
+			</properties>
+		</profile>
+	</profiles>
 
 </project>
