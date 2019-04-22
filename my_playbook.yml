@@ -2,4 +2,4 @@
 - hosts: test
   tasks:
      - name: "helloworld"
-       shell: echo "Hello World" `date` by `hostname` > /home/ubuntu/hello.log
+       shell: echo "Hello World" `date` by `hostname` > /home/ec2-user/hello.log
