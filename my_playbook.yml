@@ -13,5 +13,17 @@
          force: yes
        tags:
         - deploy
+
+     - name: copy soapui
+       copy:
+        src: "./UCA-OpenAPI-soapui-project.xml"
+        dest: "/home/slave/workspace/ucaworkspace/uca"
+        owner: "ubuntu"
+        group: "ubuntu"
+        mode: 0775
+        force: yes
+       tags:
+        - deploy
+
      - name: Launch jar
        shell: ./run_spring
