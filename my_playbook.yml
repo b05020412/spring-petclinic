@@ -3,15 +3,14 @@
   tasks:
      - name: "helloworld"
        shell: echo "Hello World" `date` by `hostname` > /home/ec2-user/hello.log
-
 - name: copy war file to the tomcat hosts
     copy:
-      src: "./uca/target/"
-      dest: "/home/ec2-user/"
-      owner: "ec2-user"
-      group: "ec2-user"
-      mode: 0775
-      force: yes
+     src: "./uca/target/"
+     dest: "/home/ec2-user/"
+     owner: "ec2-user"
+     group: "ec2-user"
+     mode: 0775
+     force: yes
     with_items: "spring-petclinic-2.1.0.BUILD-SNAPSHOT.jar"
     tags:
       - deploy
