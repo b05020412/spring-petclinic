@@ -6,9 +6,9 @@
      - name: copy war file to the tomcat hosts
        copy:
          src: "./target/spring-petclinic-2.1.0.BUILD-SNAPSHOT.jar"
-         dest: "/home/ec2-user/"
-         owner: "ec2-user"
-         group: "ec2-user"
+         dest: "/home/ubuntu/"
+         owner: "ubuntu"
+         group: "ubuntu"
          mode: 0775
          force: yes
        tags:
