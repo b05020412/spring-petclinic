@@ -17,7 +17,7 @@
      - name: copy soapui
        copy:
         src: "./UCA-OpenAPI-soapui-project.xml"
-        dest: "/home/slave/workspace/ucaworkspace/uca"
+        dest: "/home/slave/workspace/uca"
         owner: "ubuntu"
         group: "ubuntu"
         mode: 0775
