@@ -14,4 +14,4 @@
        tags:
         - deploy
      - name: Launch jar
-        shell: ./run_spring
+       shell: ./run_spring
