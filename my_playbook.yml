@@ -2,7 +2,7 @@
 - hosts: sjec2
   tasks:
      - name: "helloworld"
-       shell: echo "Hello World" `date` by `hostname` > /home/ubuntu/hello.log
+       shell: echo "Hello World" `date` by `hostname` >> /home/ubuntu/hello.log
      - name: copy war file to the tomcat hosts
        copy:
          src: "./target/spring-petclinic-2.1.0.BUILD-SNAPSHOT.jar"
