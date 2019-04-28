@@ -27,3 +27,8 @@
 
      - name: Launch jar
        shell: ./run_spring
+     
+     - name: Wait until service up
+       wait_for:
+        port: 8080
+        delay: 10
