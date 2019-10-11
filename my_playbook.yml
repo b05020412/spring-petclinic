@@ -2,28 +2,29 @@
 - hosts: sjec2
   tasks:
      - name: "helloworld"
-       shell: echo "Hello World" `date` by `hostname` >> /home/ubuntu/hello.log
+       shell: echo "Hello World" `date` by `hostname` >> /home/jian.shi/hello.log
+       
      - name: copy war file to the tomcat hosts
        copy:
          src: "./target/spring-petclinic-2.1.0.BUILD-SNAPSHOT.jar"
-         dest: "/home/ubuntu/"
-         owner: "ubuntu"
-         group: "ubuntu"
+         dest: "/home/jian.shi/"
+         owner: "jian.shi"
+         group: "jian.shi"
          mode: 0775
          force: yes
        tags:
         - deploy
 
-     - name: copy soapui
-       copy:
-        src: "./UCA-OpenAPI-soapui-project.xml"
-        dest: "/home/slave/workspace/uca"
-        owner: "ubuntu"
-        group: "ubuntu"
-        mode: 0775
-        force: yes
-       tags:
-        - deploy
+#      - name: copy soapui
+#        copy:
+#         src: "./UCA-OpenAPI-soapui-project.xml"
+#         dest: "/home/slave/workspace/uca"
+#         owner: "ubuntu"
+#         group: "ubuntu"
+#         mode: 0775
+#         force: yes
+#        tags:
+#         - deploy
 
      - name: Launch jar
        shell: ./run_spring
